@@ -3,15 +3,15 @@ package cmd
 import (
 	"fmt"
 
-	"github.com/dev-drprasad/porter-hashicorp-plugins/pkg"
+	"github.com/richbai90/porter-advanced-build-plugins/pkg"
 	"github.com/spf13/cobra"
 )
 
 var p *pkg.PluginBox
 
 var rootCmd = &cobra.Command{
-	Use:   "hashicorp",
-	Short: "HashiCorp plugins for Porter",
+	Use:   "docker",
+	Short: "Advanced Build Configurations for Porter",
 
 	// Lets not send usage text and "Run ... for help" to caller when error happens
 	// https://github.com/spf13/cobra/issues/1111

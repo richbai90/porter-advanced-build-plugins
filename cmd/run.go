@@ -4,15 +4,15 @@ import (
 	"errors"
 	"os"
 
-	"github.com/dev-drprasad/porter-hashicorp-plugins/pkg"
+	"github.com/richbai90/porter-advanced-build-plugins/pkg"
 	"github.com/spf13/cobra"
 )
 
 var runCmd = &cobra.Command{
 	Use:       "run [implementation]",
 	Short:     "Run the plugin and listen for client connections.",
-	Args:      cobra.ExactValidArgs(1),
-	ValidArgs: []string{pkg.VaultPluginInterface},
+	Args:      cobra.OnlyValidArgs,
+	ValidArgs: []string{pkg.BuildPluginInterface},
 	RunE: func(cmd *cobra.Command, args []string) error {
 		return p.Run(args)
 	},
